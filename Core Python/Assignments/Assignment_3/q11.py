@@ -10,4 +10,3 @@ people4 = int(input("Enter you age: "))
 people5 = int(input("Enter you age: "))
 
 ticket_price = 300
-if()
