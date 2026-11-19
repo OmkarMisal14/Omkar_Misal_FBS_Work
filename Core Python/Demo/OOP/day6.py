@@ -15,7 +15,7 @@ class Employee:
         return self.salary
     def setSalary(self, emp_salary):
         self.salary = emp_salary
-    def __str(self):
+    def __str__(self):
         return f"Id: {self.id} Name:{self.name} Salary: {self.salary}"
     def calSal(self):
         print(f"Total Employee salary is :{self.salary}")
