@@ -22,7 +22,10 @@ class EmpMange:
             EmpMange.empDict[id] = emp
     def displayEmployee(self):
         if not EmpMange.empDict:
-            print("Is empty?")
+            print("Employees not exits")
+        else:
+            for values in EmpMange.empDict.values():
+                print(f"{values}")
     def searchEmployee(self):
         print("Search ")
 
