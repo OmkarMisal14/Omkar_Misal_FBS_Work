@@ -20,6 +20,7 @@ class EmpMange:
             else:
                 print("Invalid Input.....")
             EmpMange.empDict[id] = emp
+            print("Employee created successfully....")
     def displayEmployee(self):
         if not EmpMange.empDict:
             print("Employees not exits")
@@ -27,10 +28,23 @@ class EmpMange:
             for values in EmpMange.empDict.values():
                 print(f"{values}")
     def searchEmployee(self):
-        print("Search ")
+        eId = int(input("Enter employee id: "))
+        if eId in EmpMange.empDict:
+            print(EmpMange.empDict[eId])
+        else:
+            print("Employee with this id is not found")
 
     def updateEmployee(Self):
-        print("Update")
-
+        eId = int(input("Enter employee id: "))
+        if eId in EmpMange.empDict: 
+            newName = input("Enter New name of employee: ")
+            EmpMange.empDict[eId].setName(newName)
+            print("Name uploaded sucessfully ....")
     def deleteEmployee(self):
-        print("Delete")
+        eId = int(input("Enter employee id: "))
+        if eId in EmpMange.empDict:
+            print(f"Employee with id {eId} deleted successfully...")
+            del EmpMange.empDict[eId]
+        else:
+            print("Employee not found ")
+            return
